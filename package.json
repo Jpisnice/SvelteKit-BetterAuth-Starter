@@ -50,6 +50,10 @@
 		"vitest": "^3.0.0"
 	},
 	"dependencies": {
+		"@types/bun": "^1.2.8",
+		"@types/node": "^22.13.14",
+		"better-auth": "^1.2.5",
+		"dotenv": "^16.4.7",
 		"drizzle-orm": "^0.40.0",
 		"postgres": "^3.4.5"
 	}
