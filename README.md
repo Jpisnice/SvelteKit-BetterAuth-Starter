@@ -114,6 +114,35 @@ This project uses Better Auth with GitHub and Google OAuth providers. Users can 
 - `/login` - Sign in page with social providers
 - The session is accessible throughout the application
 
+### OAuth Provider Setup
+
+#### GitHub OAuth
+
+1. Go to GitHub → Settings → Developer Settings → OAuth Apps → New OAuth App
+2. Fill in the application details:
+   - Application name: Your app name
+   - Homepage URL: `http://localhost:5173` (for development)
+   - Authorization callback URL: `http://localhost:5173/api/auth/callback/github`
+3. Click "Register Application"
+4. Copy the Client ID and generate a new Client Secret
+5. Add these to your `.env` file as `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`
+
+#### Google OAuth
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select an existing one
+3. Navigate to "APIs & Services" → "Credentials"
+4. Click "Create Credentials" → "OAuth client ID"
+5. Configure the consent screen if prompted
+6. For application type, select "Web application"
+7. Add authorized redirect URIs:
+   - `http://localhost:5173/api/auth/callback/google` (for development)
+8. Click "Create"
+9. Copy the Client ID and Client Secret
+10. Add these to your `.env` file as `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`
+
+For production deployment, make sure to update the callback URLs to your production domain.
+
 ## Additional Tips
 
 ### Tailwind CSS
