@@ -43,6 +43,7 @@ cp .env.example .env
 ```
 
 Update the following values in your `.env` file:
+
 - `BETTER_AUTH_SECRET`: Generate a strong random string
 - `GITHUB_CLIENT_ID` & `GITHUB_CLIENT_SECRET`: From GitHub OAuth Apps
 - `GOOGLE_CLIENT_ID` & `GOOGLE_CLIENT_SECRET`: From Google Cloud Console
@@ -148,6 +149,7 @@ For production deployment, make sure to update the callback URLs to your product
 ### Tailwind CSS
 
 The project is configured with Tailwind CSS and includes the following plugins:
+
 - `@tailwindcss/forms` - Better form styling
 - `@tailwindcss/typography` - Rich text content styling
 
